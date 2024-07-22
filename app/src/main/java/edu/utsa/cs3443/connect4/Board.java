@@ -1,5 +1,5 @@
 package edu.utsa.cs3443.connect4;
-//Hopefully this will update in the Github....
+//Test
 public class Board {
     private static Piece[][] board;
 
