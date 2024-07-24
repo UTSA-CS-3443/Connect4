@@ -1,10 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HowToPlayActivity">
+    android:background="@drawable/blue_gradient"
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How to Play Connect 4"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:textColor="#FFEB3B"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Objective"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#FFEB3B"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The goal of Connect 4 is to be the first player to align four of your pieces in a row, either horizontally, vertically, or diagonally."
+                android:textColor="#FFEB3B"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Game Setup"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#FFEB3B"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. Players: The game is played by two players."
+                android:textColor="#FFEB3B"
+                android:layout_marginBottom="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. Board: The game board consists of a 7-column by 6-row grid."
+                android:textColor="#FFEB3B"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gameplay"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#FFEB3B"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. Starting the Game: Player 1 starts by selecting a column to drop their piece into."
+                android:textColor="#FFEB3B"
+                android:layout_marginBottom="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. Taking Turns: Players take turns dropping one of their pieces into any of the columns."
+                android:textColor="#FFEB3B"
+                android:layout_marginBottom="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. Placing Pieces: The piece will occupy the lowest available space within the chosen column."
+                android:textColor="#FFEB3B"
+                android:layout_marginBottom="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4. Winning the Game: The first player to get four of their pieces in a row (horizontally, vertically, or diagonally) wins."
+                android:textColor="#FFEB3B"
+                android:layout_marginBottom="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5. Tie Game: If the board is completely filled with no four-piece line formed by either player, the game ends in a tie."
+                android:textColor="#FFEB3B"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Controls"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#FFEB3B"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Drop Piece: Tap on the column where you want to drop your piece."
+                android:textColor="#FFEB3B"
+                android:layout_marginBottom="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Turn Indicator: A text indicator shows which player's turn it is."
+                android:textColor="#FFEB3B"
+                android:layout_marginBottom="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Settings: Customize your piece colors in the settings menu."
+                android:textColor="#FFEB3B"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tips and Strategies"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#FFEB3B"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Think Ahead: Plan your moves and anticipate your opponent's strategy."
+                android:textColor="#FFEB3B"
+                android:layout_marginBottom="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Block Your Opponent: Prevent your opponent from connecting four by placing your piece strategically."
+                android:textColor="#FFEB3B"
+                android:layout_marginBottom="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Create Multiple Threats: Set up opportunities to connect four in different ways to increase your chances of winning."
+                android:textColor="#FFEB3B"
+                android:layout_marginBottom="16dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
