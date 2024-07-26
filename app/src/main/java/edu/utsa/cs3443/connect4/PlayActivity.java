@@ -1,24 +1,60 @@
 package edu.utsa.cs3443.connect4;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import edu.utsa.cs3443.connect4.model.Player;
+import edu.utsa.cs3443.connect4.view.BoardView;
+import edu.utsa.cs3443.connect4.model.Piece;
 
 public class PlayActivity extends AppCompatActivity {
+
+    private BoardView boardView;
+    private TextView turnTextView;
+    private Button settingsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_play);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        boardView = findViewById(R.id.boardView);
+        turnTextView = findViewById(R.id.turn);
+        settingsButton = findViewById(R.id.settingsButton);
+
+        boardView.setOnGameEndListener(new BoardView.OnGameEndListener() {
+            @Override
+            public void onGameEnd(String winnerMessage) {
+                Intent intent = new Intent(PlayActivity.this, GameEndActivity.class);
+                intent.putExtra("WINNER_MESSAGE", winnerMessage);
+                startActivity(intent);
+                finish();
+            }
         });
+
+        boardView.setOnTurnChangeListener(new BoardView.OnTurnChangeListener() {
+            @Override
+            public void onTurnChange(Player currentPlayer) {
+                updateTurnTextView(currentPlayer);
+            }
+        });
+
+        settingsButton.setOnClickListener(v -> {
+            Intent intent = new Intent(PlayActivity.this, SettingsActivity.class);
+            startActivity(intent);
+        });
+
+        // Initialize the turn text view with the first player
+        updateTurnTextView(boardView.getCurrentPlayer());
+    }
+
+    private void updateTurnTextView(Player currentPlayer) {
+        String turnText = "Player " + (currentPlayer.getMark().getState() == Piece.State.PLAYER_ONE ? "1" : "2") + "'s turn";
+        turnTextView.setText(turnText);
     }
 }

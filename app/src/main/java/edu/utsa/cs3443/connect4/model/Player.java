@@ -1,4 +1,4 @@
-package edu.utsa.cs3443.connect4;
+package edu.utsa.cs3443.connect4.model;
 
 public class Player {
     private Piece mark;
