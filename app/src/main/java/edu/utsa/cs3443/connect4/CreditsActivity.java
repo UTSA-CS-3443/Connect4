@@ -1,7 +1,9 @@
 package edu.utsa.cs3443.connect4;
 
+import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -28,5 +30,11 @@ public class CreditsActivity extends AppCompatActivity {
 
         TextView designer = (TextView) findViewById(R.id.designer);
         designer.setPaintFlags(designer.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+
+        Button menuButton = (Button) findViewById(R.id.menuButton);
+        menuButton.setOnClickListener(view -> {
+            Intent intent = new Intent(CreditsActivity.this, MainActivity.class);
+            startActivity(intent);
+        });
     }
 }
