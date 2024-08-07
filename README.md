@@ -15,7 +15,8 @@ Names of all contributors:
 *Declan Petershack (Github Blazentesrill)
 
 Install:
-
+git clone <https://github.com/UTSA-CS-3443/Connect4.git>
+cd connect4-android
 
 Instructions: To run the the application 
 The how-to-play screen teaches players how to play Connect 4, while a credits screen showcases team members' contributions. The settings allow players to change colors, adjust music volume, and reset stats. The play button presents the game board, player turn prompt, win record, menu, and settings.
