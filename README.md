@@ -25,8 +25,9 @@
 
 Step 1:
 
-***Clone the Repository***
+***Clone the Repository or download Zip***
 
+**To Clone**
 
 git clone -b master https://github.com/UTSA-CS-3443/Connect4.git
 
