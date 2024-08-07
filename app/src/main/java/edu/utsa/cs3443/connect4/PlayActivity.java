@@ -68,7 +68,7 @@ public class PlayActivity extends AppCompatActivity {
         turnTextView.setText(turnText);
     }
 
-    private void updateWinCountsFromFile() {
+    private void updateWinCountsFromFile(){
         String filename = "connect4_results.txt";
         int p1Wins = 0, p2Wins = 0;
 
