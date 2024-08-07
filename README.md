@@ -24,7 +24,13 @@ Java Development Kit (JDK) 8+
 
 Step 1:
 
-**Clone the Repository**
+***Clone the Repository***
+
+Launch Android Studio
+
+Click on "File" then "Open"
+
+Navigate to the Connect 4 directory and select it
 
 git clone -b master https://github.com/UTSA-CS-3443/Connect4.git
 
