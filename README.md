@@ -19,9 +19,9 @@
 
 ***Prerequisites***
 
-Android Studio (latest version recommended)
+**Android Studio (latest version recommended)**
 
-Java Development Kit (JDK) 8+
+**Java Development Kit (JDK) 8+**
 
 Step 1:
 
