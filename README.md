@@ -6,4 +6,5 @@ Names of all contributors:
 Hieu Phan 
 Daniel Zamora
 Christian Evans
+Declan Petershack
 Instructions:
