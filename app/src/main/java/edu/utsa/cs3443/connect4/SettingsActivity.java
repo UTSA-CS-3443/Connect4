@@ -32,7 +32,7 @@ public class SettingsActivity extends AppCompatActivity {
     private int player1Color = Color.RED;
     private int player2Color = Color.YELLOW;
 
-    AudioManager audioManager;
+    private AudioManager audioManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
