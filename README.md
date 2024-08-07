@@ -5,6 +5,6 @@ Description:
 Names of all contributors:
 Hieu Phan 
 Daniel Zamora
-Christian Evans (Rokow6)
+Christian Evans (Github: Rokow6)
 Declan Petershack
 Instructions:
