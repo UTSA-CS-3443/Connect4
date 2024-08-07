@@ -14,9 +14,9 @@ Names of all contributors:
 
 -Declan Petershack (Github Blazentesrill)
 
-Install:
+****Install****
 
-**Prerequisites**
+***Prerequisites***
 
 Android Studio (latest version recommended)
 
