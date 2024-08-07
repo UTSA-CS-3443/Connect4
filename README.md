@@ -6,5 +6,5 @@ Names of all contributors:
 Hieu Phan 
 Daniel Zamora
 Christian Evans (Github: Rokow6)
-Declan Petershack
+Declan Petershack (Github Blazentesrill)
 Instructions:
