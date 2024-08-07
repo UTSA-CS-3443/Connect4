@@ -6,13 +6,13 @@ Description:
 
 Names of all contributors:
 
-*Hieu Phan (Github: hiuphan)
+-Hieu Phan (Github: hiuphan)
 
-*Daniel Zamora (Github: HasonSheeta)
+-Daniel Zamora (Github: HasonSheeta)
 
-*Christian Evans (Github: Rokow6)
+-Christian Evans (Github: Rokow6)
 
-*Declan Petershack (Github Blazentesrill)
+-Declan Petershack (Github Blazentesrill)
 
 Install:
 
@@ -29,7 +29,7 @@ Step 1:
 git clone -b master https://github.com/UTSA-CS-3443/Connect4.git
 
 Step2:
-
+***Open the Project in Android Studio***
 
 Instructions: To run the the application 
 The how-to-play screen teaches players how to play Connect 4, while a credits screen showcases team members' contributions. The settings allow players to change colors, adjust music volume, and reset stats. The play button presents the game board, player turn prompt, win record, menu, and settings.
