@@ -6,7 +6,7 @@ Description:
 
 Names of all contributors:
 Hieu Phan (Github: hiuphan)
-Daniel Zamora
+Daniel Zamora (Github: HasonSheeta)
 Christian Evans (Github: Rokow6)
 Declan Petershack (Github Blazentesrill)
 
