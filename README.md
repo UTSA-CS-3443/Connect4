@@ -15,7 +15,7 @@ Names of all contributors:
 *Declan Petershack (Github Blazentesrill)
 
 Install:
-git clone <https://github.com/UTSA-CS-3443/Connect4.git>
+git clone <[https://github.com/UTSA-CS-3443/Connect4.git](https://github.com/UTSA-CS-3443/Connect4.git)>
 cd connect4-android
 
 Instructions: To run the the application 
