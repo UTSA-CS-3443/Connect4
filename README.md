@@ -71,9 +71,13 @@ Click the "Run" button (green play icon) or select "Run" from the menu and choos
 
 The how-to-play screen teaches players how to play Connect 4, while a credits screen showcases team members' contributions. The settings allow players to change colors, adjust music volume, and reset stats. The play button presents the game board, player turn prompt, win record, menu, and settings.
 
-Issues: We included some music that plays within the app however sometimes there were issues with the music still playing even when the app itself is closed on the emulator. 
+**Issues**
 
-Location: the code for our application is located in the master branch not the main branch since we had difficulties getting the main branch working and did not want to mess up our final product.
+We included some music that plays within the app however sometimes there were issues with the music still playing even when the app itself is closed on the emulator. Also there was difficulty making it so that a player could upload an image but the code is there.
+
+**Location**
+
+The code for our application is located in the master branch not the main branch since we had difficulties getting the main branch working and did not want to mess up our final product.
 
 
 
