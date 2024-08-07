@@ -14,7 +14,7 @@ Names of all contributors:
 
 -Declan Petershack (Github Blazentesrill)
 
-****Install****
+**Install**
 
 ***Prerequisites***
 
