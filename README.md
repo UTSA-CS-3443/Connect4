@@ -33,13 +33,13 @@ git clone -b master https://github.com/UTSA-CS-3443/Connect4.git
 
 ***To download as Zip***
 
--Go to the repository page on GitHub
+Go to the repository page on GitHub
 
--Click the "Code" button
+Click the "Code" button
 
--Select "Download ZIP"
+Select "Download ZIP"
 
--Extract the downloaded ZIP file
+Extract the downloaded ZIP file
 
 Step2:
 
