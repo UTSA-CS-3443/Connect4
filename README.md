@@ -56,7 +56,7 @@ Connect an Android device via USB or start an Android Virtual Device (AVD) from 
 
 Click the "Run" button (green play icon) or select "Run" from the menu and choose "Run 'app'"
 
-***Instructions: To run the the application***
+**Instructions: To navigate the application**
 
 The how-to-play screen teaches players how to play Connect 4, while a credits screen showcases team members' contributions. The settings allow players to change colors, adjust music volume, and reset stats. The play button presents the game board, player turn prompt, win record, menu, and settings.
 
