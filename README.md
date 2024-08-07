@@ -27,45 +27,45 @@ Step 1:
 
 ***Clone the Repository or download Zip***
 
-**To Clone**
+***To Clone***
 
 git clone -b master https://github.com/UTSA-CS-3443/Connect4.git
 
-**To download as Zip**
+***To download as Zip***
 
-Go to the repository page on GitHub
+-Go to the repository page on GitHub
 
-Click the "Code" button
+-Click the "Code" button
 
-Select "Download ZIP"
+-Select "Download ZIP"
 
-Extract the downloaded ZIP file
+-Extract the downloaded ZIP file
 
 Step2:
 
 ***Open the Project in Android Studio***
 
-Launch Android Studio
+-Launch Android Studio
 
-Click on "File" then "Open"
+-Click on "File" then "Open"
 
-Navigate to the Connect 4 directory and select it
+-Navigate to the Connect 4 directory and select it
 
 Step 3:
 
 ***Build the Project***
 
-Allow Android Studio to download and configure any necessary dependencies
+-Allow Android Studio to download and configure any necessary dependencies
 
-Click on "Build" from the menu and select "Rebuild Project"
+-Click on "Build" from the menu and select "Rebuild Project"
 
 Step 4:
 
 ***Run the Application***
 
-Connect an Android device via USB or start an Android Virtual Device (AVD) from the AVD Manager
+-Connect an Android device via USB or start an Android Virtual Device (AVD) from the AVD Manager
 
-Click the "Run" button (green play icon) or select "Run" from the menu and choose "Run 'app'"
+-Click the "Run" button (green play icon) or select "Run" from the menu and choose "Run 'app'"
 
 **Instructions: To navigate the application**
 
