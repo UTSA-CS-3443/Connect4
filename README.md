@@ -6,13 +6,13 @@ Description:
 
 Names of all contributors:
 
-Hieu Phan (Github: hiuphan)
+  Hieu Phan (Github: hiuphan)
 
-Daniel Zamora (Github: HasonSheeta)
+  Daniel Zamora (Github: HasonSheeta)
 
-Christian Evans (Github: Rokow6)
+  Christian Evans (Github: Rokow6)
 
-Declan Petershack (Github Blazentesrill)
+  Declan Petershack (Github Blazentesrill)
 
 Install:
 
