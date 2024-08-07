@@ -40,12 +40,13 @@ public class SettingsActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_settings);
         menuButton = findViewById(R.id.menuButton);
-
+        // Adjust padding for system bars (e.g., status bar, navigation bar)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        // Menu button navigates to main activity
         menuButton.setOnClickListener(view -> {
             Intent intent = new Intent(SettingsActivity.this, MainActivity.class);
             startActivity(intent);
@@ -57,21 +58,25 @@ public class SettingsActivity extends AppCompatActivity {
         resetPlayer2ColorButton = findViewById(R.id.resetPlayer2ColorButton);
         resetStatsButton = findViewById(R.id.resetStatsButton);
 
+        // Retrieve saved colors
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         player1Color = prefs.getInt("player1_color", Color.RED);
         player2Color = prefs.getInt("player2_color", Color.YELLOW);
 
+        // Set initial button colors
         setButtonColor(player1ColorButton, player1Color);
         setButtonColor(player2ColorButton, player2Color);
 
+        // Color button click listeners
         player1ColorButton.setOnClickListener(v -> openColorPicker(1));
-
         player2ColorButton.setOnClickListener(v -> openColorPicker(2));
 
+        // Reset button click listeners
         resetPlayer1ColorButton.setOnClickListener(v -> resetPlayer1Color());
         resetPlayer2ColorButton.setOnClickListener(v -> resetPlayer2Color());
         resetStatsButton.setOnClickListener(v -> resetStats());
 
+        // Initialize audio manager and volume control
         audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
         int maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
         int currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
@@ -82,20 +87,21 @@ public class SettingsActivity extends AppCompatActivity {
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, i, 0 );
+                audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, i, 0);
             }
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-
+                // No action needed
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-
+                // No action needed
             }
         });
     }
+    // Open color picker dialog
     private void openColorPicker(final int player) {
         AmbilWarnaDialog dialog = new AmbilWarnaDialog(this, player == 1 ? player1Color : player2Color, new AmbilWarnaDialog.OnAmbilWarnaListener() {
             @Override
@@ -118,18 +124,19 @@ public class SettingsActivity extends AppCompatActivity {
         });
         dialog.show();
     }
-
+    // Reset player 1 color to default and save
     private void resetPlayer1Color() {
         player1Color = Color.RED;
         setButtonColor(player1ColorButton, player1Color);
         saveColor("player1_color", player1Color);
     }
-
+    // Reset player 2 color to default and save
     private void resetPlayer2Color() {
         player2Color = Color.YELLOW;
         setButtonColor(player2ColorButton, player2Color);
         saveColor("player2_color", player2Color);
     }
+    // Reset game statistics
     private void resetStats() {
         String filename = "connect4_results.txt";
 
@@ -141,14 +148,14 @@ public class SettingsActivity extends AppCompatActivity {
             Toast.makeText(this, "Error resetting stats", Toast.LENGTH_SHORT).show();
         }
     }
-
+    // Save color to shared preferences
     private void saveColor(String key, int color) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(key, color);
         editor.apply();
     }
-
+    // Set button color and adjust text color for contrast
     private void setButtonColor(Button button, int color) {
         button.setBackgroundColor(color);
         if (isColorDark(color)) {
@@ -157,7 +164,7 @@ public class SettingsActivity extends AppCompatActivity {
             button.setTextColor(Color.BLACK);
         }
     }
-
+    // Check if a color is dark
     private boolean isColorDark(int color) {
         double darkness = 1 - (0.299 * Color.red(color) + 0.587 * Color.green(color) + 0.114 * Color.blue(color)) / 255;
         return darkness >= 0.5;

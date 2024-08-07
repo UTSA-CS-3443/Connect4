@@ -10,6 +10,8 @@ import android.os.IBinder;
 
 public class BackgroundMusicService extends Service {
     private MediaPlayer player;
+
+    // Receiver to stop the service on specified actions (e.g., screen off)
     private final BroadcastReceiver stopServiceReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -28,6 +30,8 @@ public class BackgroundMusicService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        // Initialize MediaPlayer with background music and set it to loop
         player = MediaPlayer.create(this, R.raw.hero);
         player.setLooping(true);
         player.setVolume(100, 100);
@@ -39,6 +43,7 @@ public class BackgroundMusicService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        // Ensure MediaPlayer is initialized and start playing if not already
         if (player == null) {
             player = MediaPlayer.create(this, R.raw.hero);  // ensure your resource file
             player.setLooping(true);
@@ -53,6 +58,7 @@ public class BackgroundMusicService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
+        // Stop and release MediaPlayer resources
         if (player != null) {
             if (player.isPlaying()) {
                 player.stop();
@@ -60,6 +66,7 @@ public class BackgroundMusicService extends Service {
             player.release();
             player = null;
         }
+        // Unregister the receiver
         unregisterReceiver(stopServiceReceiver);
     }
 

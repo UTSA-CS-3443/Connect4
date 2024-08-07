@@ -14,21 +14,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Button to start the game
         Button startGame = findViewById(R.id.button);
         startGame.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, PlayActivity.class);
             startActivity(intent);
         });
+
+        // Button to show how to play instructions
         Button how2Play = findViewById(R.id.button1);
         how2Play.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, HowToPlayActivity.class);
             startActivity(intent);
         });
+
+        // Button to open settings
         Button settings = findViewById(R.id.button2);
         settings.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
             startActivity(intent);
         });
+
+        // Button to view credits
         Button credits = findViewById(R.id.button3);
         credits.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, CreditsActivity.class);

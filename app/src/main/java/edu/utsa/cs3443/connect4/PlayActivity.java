@@ -36,6 +36,7 @@ public class PlayActivity extends AppCompatActivity {
         settingsButton = findViewById(R.id.settingsButton);
         menuButton = findViewById(R.id.menuButton);
 
+        // Set listener for game end
         boardView.setOnGameEndListener(new BoardView.OnGameEndListener() {
             @Override
             public void onGameEnd(String winnerMessage) {
@@ -46,13 +47,16 @@ public class PlayActivity extends AppCompatActivity {
             }
         });
 
+        // Set listener for turn change
         boardView.setOnTurnChangeListener(currentPlayer -> updateTurnTextView(currentPlayer));
 
+        // Open settings activity on button click
         settingsButton.setOnClickListener(v -> {
             Intent intent = new Intent(PlayActivity.this, SettingsActivity.class);
             startActivity(intent);
         });
 
+        // Open main activity on button click
         menuButton.setOnClickListener(view -> {
             Intent intent = new Intent(PlayActivity.this, MainActivity.class);
             startActivity(intent);
@@ -60,14 +64,17 @@ public class PlayActivity extends AppCompatActivity {
 
         // Initialize the turn text view with the first player
         updateTurnTextView(boardView.getCurrentPlayer());
+        // Load win counts from file
         updateWinCountsFromFile();
     }
 
+    // Update the text view to show the current player's turn
     private void updateTurnTextView(Player currentPlayer) {
         String turnText = "Player " + (currentPlayer.getMark().getState() == Piece.State.PLAYER_ONE ? "1" : "2") + "'s turn";
         turnTextView.setText(turnText);
     }
 
+    // Read win counts from file and update the text view
     private void updateWinCountsFromFile(){
         String filename = "connect4_results.txt";
         int p1Wins = 0, p2Wins = 0;

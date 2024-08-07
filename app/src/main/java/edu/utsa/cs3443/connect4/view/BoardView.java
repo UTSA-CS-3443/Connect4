@@ -49,6 +49,7 @@ public class BoardView extends View {
         init(context);
     }
 
+    // Initialize the board and players
     private void init(Context context) {
         board = new Board();
         Piece piece1 = new Piece();
@@ -77,6 +78,7 @@ public class BoardView extends View {
         int cellWidth = getWidth() / 7;
         int cellHeight = getHeight() / 6;
 
+        // Draw the board pieces
         for (int row = 0; row < 6; row++) {
             for (int col = 0; col < 7; col++) {
                 Piece piece = board.getPiece(row, col);
@@ -107,6 +109,7 @@ public class BoardView extends View {
         }
     }
 
+    // Draw circular image for the player's piece
     private void drawCircularImage(Canvas canvas, Bitmap image, int col, int row, int cellWidth, int cellHeight) {
         Bitmap scaledImage = Bitmap.createScaledBitmap(image, cellWidth, cellHeight, false);
         BitmapShader shader = new BitmapShader(scaledImage, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
@@ -116,6 +119,7 @@ public class BoardView extends View {
         canvas.drawOval(rect, imagePaint);
     }
 
+    // Update player colors and images from preferences
     private void updatePreferences(Context context) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         player1Color = prefs.getInt("player1_color", android.graphics.Color.RED);

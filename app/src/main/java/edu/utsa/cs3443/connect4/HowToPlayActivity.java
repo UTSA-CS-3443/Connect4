@@ -15,6 +15,7 @@ public class HowToPlayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_how_to_play);
 
+        // Button to return to main menu
         Button menuButton = findViewById(R.id.menuButton);
         menuButton.setOnClickListener(view -> {
             Intent intent = new Intent(HowToPlayActivity.this, MainActivity.class);

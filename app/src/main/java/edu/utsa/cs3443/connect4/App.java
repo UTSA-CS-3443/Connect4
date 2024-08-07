@@ -29,7 +29,7 @@ public class App extends Application implements Application.ActivityLifecycleCal
     @Override
     public void onActivityStarted(Activity activity) {
         if (++activityReferences == 1 && !isActivityChangingConfigurations) {
-            // App enters foreground
+            // App enters foreground, start the music service
             startMusicService();
         }
     }
@@ -38,7 +38,7 @@ public class App extends Application implements Application.ActivityLifecycleCal
     public void onActivityStopped(Activity activity) {
         isActivityChangingConfigurations = activity.isChangingConfigurations();
         if (--activityReferences == 0 && !isActivityChangingConfigurations) {
-            // App enters background
+            // App enters background, stop the music service
             stopMusicService();
         }
     }

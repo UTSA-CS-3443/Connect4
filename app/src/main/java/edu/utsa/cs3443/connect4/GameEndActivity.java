@@ -19,14 +19,17 @@ public class GameEndActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_end);
 
+        // Display the winner message
         TextView winnerMessageTextView = findViewById(R.id.winnerMessageTextView);
         String winnerMessage = getIntent().getStringExtra("WINNER_MESSAGE"); // Update this line
         winnerMessageTextView.setText(winnerMessage);
 
+        // Update win counts and write the result to a file
         updateWinCounts(winnerMessage);
         writeGameResultToFile(winnerMessage);
     }
 
+    // Update the win counts based on the winner message
     private void updateWinCounts(String winnerMessage) {
         if (winnerMessage.contains("Player 1")) {
             player1Wins++;
@@ -35,6 +38,7 @@ public class GameEndActivity extends AppCompatActivity {
         }
     }
 
+    // Write the game result to a file
     private void writeGameResultToFile(String winnerMessage) {
         String filename = "connect4_results.txt";
         String fileContents = winnerMessage + ", Player 1 Wins: " + player1Wins + ", Player 2 Wins: " + player2Wins + "\n";
@@ -45,6 +49,7 @@ public class GameEndActivity extends AppCompatActivity {
         }
     }
 
+    // Button click handler to play again
     public void playAgain(View view) {
         Intent intent = new Intent(this, PlayActivity.class);
         startActivity(intent);

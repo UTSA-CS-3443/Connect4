@@ -14,6 +14,7 @@ public class Board {
         }
     }
 
+    // Make a move on the board
     public boolean move(Player p, int col) {
         if (col >= 0 && col <= 6 && bottom[col] >= 0 && board[bottom[col]][col].getState() == Piece.State.EMPTY) {
             board[bottom[col]][col].setState(p.getMark().getState());
@@ -25,10 +26,12 @@ public class Board {
         }
     }
 
+    // Check for a win condition
     public boolean gameWin(Player p) {
         return hMatch(p) || vMatch(p) || leftDiagMatch(p) || rightDiagMatch(p);
     }
 
+    // Check for a horizontal match
     private boolean hMatch(Player p) {
         int m = p.getMark().getState().ordinal();
         for (int r = 0; r < 6; r++) {
@@ -44,6 +47,7 @@ public class Board {
         return false;
     }
 
+    // Check for a vertical match
     private boolean vMatch(Player p) {
         int m = p.getMark().getState().ordinal();
         for (int c = 0; c < 7; c++) {
@@ -59,6 +63,7 @@ public class Board {
         return false;
     }
 
+    // Check for a left diagonal match
     private boolean leftDiagMatch(Player p) {
         int m = p.getMark().getState().ordinal();
         for (int r = 0; r < 3; r++) {
@@ -74,6 +79,7 @@ public class Board {
         return false;
     }
 
+    // Check for a right diagonal match
     private boolean rightDiagMatch(Player p) {
         int m = p.getMark().getState().ordinal();
         for (int r = 0; r < 3; r++) {
@@ -89,6 +95,7 @@ public class Board {
         return false;
     }
 
+    // Check for a tie condition
     public boolean gameTie() {
         for (int c = 0; c < 7; c++) {
             if (board[0][c].getState() == Piece.State.EMPTY) {

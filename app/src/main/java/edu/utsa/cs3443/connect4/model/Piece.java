@@ -11,12 +11,12 @@ public class Piece {
         EMPTY, PLAYER_ONE, PLAYER_TWO
     }
 
-    // Default constructor
+    // Default constructor, initializes piece as empty
     public Piece() {
         this.state = State.EMPTY; // All pieces start as empty
     }
 
-    // New constructor to accept state
+    // Constructor to accept initial state
     public Piece(State state) {
         this.state = state;
     }
@@ -37,6 +37,7 @@ public class Piece {
         this.state = state;
     }
 
+    // Create a drawable representation of the piece
     public ShapeDrawable getDrawable() {
         ShapeDrawable drawable = new ShapeDrawable(new OvalShape());
         drawable.setIntrinsicWidth(100); // Set the size of the circle
