@@ -16,16 +16,17 @@ Names of all contributors:
 
 Install:
 
-Prerequisites
+**Prerequisites**
 
 Android Studio (latest version recommended)
 
 Java Development Kit (JDK) 8+
 
 Step 1:
-**Clone the Repository:**
 
-Command: git clone -b master https://github.com/UTSA-CS-3443/Connect4.git
+**Clone the Repository**
+
+git clone -b master https://github.com/UTSA-CS-3443/Connect4.git
 
 Step2:
 
