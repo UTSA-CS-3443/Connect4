@@ -8,4 +8,6 @@ Daniel Zamora
 Christian Evans (Github: Rokow6)
 Declan Petershack (Github Blazentesrill)
 Instructions: The how-to-play screen teaches players how to play Connect 4, while a credits screen showcases team members' contributions. The settings allow players to change colors, adjust music volume, and reset stats. The play button presents the game board, player turn prompt, win record, menu, and settings.
-Issues:
+Issues: We included some music that plays within the app however sometimes there were issues with the music still playing even when the app itself is closed on the emulator. 
+
+
