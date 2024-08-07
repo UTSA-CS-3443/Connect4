@@ -25,10 +25,21 @@
 
 Step 1:
 
-***Clone the Repository***
+***Clone the Repository or download Zip***
 
+**To Clone**
 
 git clone -b master https://github.com/UTSA-CS-3443/Connect4.git
+
+**To download as Zip**
+
+Go to the repository page on GitHub
+
+Click the "Code" button
+
+Select "Download ZIP"
+
+Extract the downloaded ZIP file
 
 Step2:
 
@@ -63,7 +74,6 @@ The how-to-play screen teaches players how to play Connect 4, while a credits sc
 Issues: We included some music that plays within the app however sometimes there were issues with the music still playing even when the app itself is closed on the emulator. 
 
 Location: the code for our application is located in the master branch not the main branch since we had difficulties getting the main branch working and did not want to mess up our final product.
-
 
 
 
