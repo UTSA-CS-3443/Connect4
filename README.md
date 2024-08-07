@@ -26,16 +26,19 @@ Step 1:
 
 ***Clone the Repository***
 
+
+git clone -b master https://github.com/UTSA-CS-3443/Connect4.git
+
+Step2:
+
+***Open the Project in Android Studio***
+
 Launch Android Studio
 
 Click on "File" then "Open"
 
 Navigate to the Connect 4 directory and select it
 
-git clone -b master https://github.com/UTSA-CS-3443/Connect4.git
-
-Step2:
-***Open the Project in Android Studio***
 
 Instructions: To run the the application 
 The how-to-play screen teaches players how to play Connect 4, while a credits screen showcases team members' contributions. The settings allow players to change colors, adjust music volume, and reset stats. The play button presents the game board, player turn prompt, win record, menu, and settings.
